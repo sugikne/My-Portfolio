@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap');
+
+/* --- Reset Style --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* --- Body Style --- */
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #E5E7EB;
+    padding: 2rem;
+    overflow-x: hidden;
+}
+
+/* --- Header Style --- */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #9CA3AF;
+    margin-top: 0.5rem;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* --- Portfolio Content (Grid Layout) --- */
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* --- Card Style (Glassmorphism) --- */
+.card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Card Image --- */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* --- Card Text --- */
+.card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: #D1D5DB;
+    margin-bottom: 1rem;
+}
+
+/* --- Card Button (Order Now) --- */
+.card a {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #2563eb;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+    margin-top: auto;
+}
+
+.card a:hover {
+    background-color: #3b82f6;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(59, 130, 246, 0.6);
+}
+
+/* --- Back to Home Button --- */
+.back-button {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.back-home {
+    padding: 0.7rem 1.7rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.back-home:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* --- Footer Style --- */
+footer {
+    text-align: center;
+    color: #9CA3AF;
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Animasi FadeIn --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+    .portfolio-content {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    .portfolio-content {
+        grid-template-columns: 1fr;
+    }
+}
