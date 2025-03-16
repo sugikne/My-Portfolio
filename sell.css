@@ -199,3 +199,36 @@ footer {
     width: 250px;
     height: auto;
 }
+
+/* Styling dasar logo */
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+    .logo {
+        width: 100px;
+    }
+
+    .portfolio-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-title, .product-price {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
